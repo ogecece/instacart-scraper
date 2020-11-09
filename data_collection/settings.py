@@ -1,0 +1,8 @@
+from decouple import config
+
+DB_DSN = config("DB_DSN")
+
+TWOCAPTCHA_API_KEY = config("TWOCAPTCHA_API_KEY")
+
+INSTACART_LOGIN = config("INSTACART_LOGIN")
+INSTACART_PASSWORD = config("INSTACART_PASSWORD")

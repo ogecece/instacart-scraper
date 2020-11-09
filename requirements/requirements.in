@@ -1,0 +1,7 @@
+aiohttp
+aiopg
+parsel
+2captcha-python
+jmespath
+sqlalchemy
+python-decouple

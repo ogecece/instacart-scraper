@@ -1,0 +1,64 @@
+Activities breakdown
+====================
+
+- Created an account on Instacart
+- Analyzed website's requests flows
+    - Checked if there was any way to login without using recaptcha (couldn't
+      find any)
+        - ~45 min
+    - Analyzed rest of the flow
+        - ~20 min
+- Setup repo and development environment
+    - ~20 min
+- Developed spider working prototype
+    - ~2 hour 40 min
+- Developed Page Object extraction pattern
+    - ~50 min
+- Created RecaptchaSolver classes
+    - ~15 min
+- Tried to work around Recaptcha solving fails
+    - ~4 hours
+- Designed next steps (decided on building a workflow manager, load data
+  into a PostgreSQL database and Dockerize the project)
+    - ~40 min
+- Looked into Prefect and Dagster for inspiration for workflows
+    - ~45 min
+- Studied aiopg to access database
+    - ~30 min
+- Implemented tasks
+    - ~25 min
+- Implemented pipeline
+    - ~20 min
+- Implemented settings
+    - ~5 min
+- Dockerized project
+    - ~30 min
+- Wrote Makefile
+    - ~30 min
+- Improved logging
+    - ~10 min
+- Documented README.md and this file
+    - ~40 min
+
+Troubling troubles
+==================
+
+Analyzing the spider wasn't trivial. Requests are so convoluted it becomes
+difficult to be sure which ones are important. I tried to fix the issue with
+the failed logins but couldn't reach a desired solution. I implemented retries
+in the workflow to deal with it, but it is not ideal (more requests, recaptcha
+costs and execution time).
+
+Future improvements
+===================
+
+- Testing
+- Implement inline documentation and improve static documentation
+- Improve project patterns to reduce code repetition, improve readability
+  and speed up development of tasks and pipelines (mainly some decorators,
+  logging infrastructure, base classes, etc.);
+- Implement Expectations to check output
+- Implement CI
+- Make spider crawl every available store
+- Make spider crawl every available item in a shelf (department)
+- Create API
